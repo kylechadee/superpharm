@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2017 at 04:35 PM
+-- Generation Time: Mar 20, 2017 at 08:29 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -43,6 +43,13 @@ CREATE TABLE `oc_address` (
   `zone_id` int(11) NOT NULL DEFAULT '0',
   `custom_field` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_address`
+--
+
+INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`, `custom_field`) VALUES
+(1, 1, 'Mik', 'Mon', 'UWI', '8770 NW 99th Street', '', 'Medley', '33178', 223, 3630, '');
 
 -- --------------------------------------------------------
 
@@ -399,42 +406,16 @@ CREATE TABLE `oc_category` (
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
 (25, '', 0, 1, 1, 3, 1, '2009-01-31 01:04:25', '2017-03-11 10:15:02'),
-(27, '', 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2010-08-22 06:32:15'),
+(27, '', 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2017-03-20 15:22:15'),
 (20, 'catalog/demo/compaq_presario.jpg', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2017-03-11 10:16:06'),
 (18, 'catalog/demo/hp_2.jpg', 0, 1, 0, 2, 1, '2009-01-05 21:49:15', '2017-03-11 10:15:38'),
 (17, '', 0, 1, 1, 4, 1, '2009-01-03 21:08:57', '2011-05-30 12:15:11'),
-(28, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:12', '2010-08-22 06:32:46'),
-(26, '', 20, 0, 0, 1, 1, '2009-01-31 01:55:14', '2010-08-22 06:31:45'),
-(29, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:37', '2010-08-22 06:32:39'),
-(30, '', 25, 0, 0, 1, 1, '2009-02-02 13:11:59', '2010-08-22 06:33:00'),
-(31, '', 25, 0, 0, 1, 1, '2009-02-03 14:17:24', '2010-08-22 06:33:06'),
-(32, '', 25, 0, 0, 1, 1, '2009-02-03 14:17:34', '2010-08-22 06:33:12'),
+(26, '', 20, 0, 0, 1, 1, '2009-01-31 01:55:14', '2017-03-20 15:22:07'),
 (33, '', 0, 1, 1, 6, 1, '2009-02-03 14:17:55', '2017-03-11 10:14:54'),
 (34, 'catalog/demo/ipod_touch_4.jpg', 0, 1, 4, 7, 1, '2009-02-03 14:18:11', '2017-03-11 10:16:39'),
-(35, '', 28, 0, 0, 0, 1, '2010-09-17 10:06:48', '2010-09-18 14:02:42'),
-(36, '', 28, 0, 0, 0, 1, '2010-09-17 10:07:13', '2010-09-18 14:02:55'),
-(37, '', 34, 0, 0, 0, 1, '2010-09-18 14:03:39', '2011-04-22 01:55:08'),
-(38, '', 34, 0, 0, 0, 1, '2010-09-18 14:03:51', '2010-09-18 14:03:51'),
-(39, '', 34, 0, 0, 0, 1, '2010-09-18 14:04:17', '2011-04-22 01:55:20'),
-(40, '', 34, 0, 0, 0, 1, '2010-09-18 14:05:36', '2010-09-18 14:05:36'),
-(41, '', 34, 0, 0, 0, 1, '2010-09-18 14:05:49', '2011-04-22 01:55:30'),
-(42, '', 34, 0, 0, 0, 1, '2010-09-18 14:06:34', '2010-11-07 20:31:04'),
-(43, '', 34, 0, 0, 0, 1, '2010-09-18 14:06:49', '2011-04-22 01:55:40'),
-(44, '', 34, 0, 0, 0, 1, '2010-09-21 15:39:21', '2010-11-07 20:30:55'),
-(45, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:16', '2011-04-26 08:52:11'),
-(46, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:31', '2011-04-26 08:52:23'),
-(47, '', 34, 0, 0, 0, 1, '2010-11-07 11:13:16', '2010-11-07 11:13:16'),
-(48, '', 34, 0, 0, 0, 1, '2010-11-07 11:13:33', '2010-11-07 11:13:33'),
-(49, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:04', '2010-11-07 11:14:04'),
-(50, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:23', '2011-04-22 01:16:01'),
-(51, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:38', '2011-04-22 01:16:13'),
-(52, '', 34, 0, 0, 0, 1, '2010-11-07 11:16:09', '2011-04-22 01:54:57'),
-(53, '', 34, 0, 0, 0, 1, '2010-11-07 11:28:53', '2011-04-22 01:14:36'),
-(54, '', 34, 0, 0, 0, 1, '2010-11-07 11:29:16', '2011-04-22 01:16:50'),
-(55, '', 34, 0, 0, 0, 1, '2010-11-08 10:31:32', '2010-11-08 10:31:32'),
-(56, '', 34, 0, 0, 0, 1, '2010-11-08 10:31:50', '2011-04-22 01:16:37'),
-(57, '', 0, 1, 1, 3, 1, '2011-04-26 08:53:16', '2017-03-11 10:16:54'),
-(58, '', 52, 0, 0, 0, 1, '2011-05-08 13:44:16', '2011-05-08 13:44:16');
+(45, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:16', '2017-03-20 15:23:17'),
+(46, '', 18, 0, 0, 0, 1, '2010-09-24 18:29:31', '2017-03-20 15:22:56'),
+(57, '', 0, 1, 1, 3, 1, '2011-04-26 08:53:16', '2017-03-11 10:16:54');
 
 -- --------------------------------------------------------
 
@@ -458,42 +439,16 @@ CREATE TABLE `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(28, 1, 'Monitors', '', 'Monitors', '', ''),
 (33, 1, 'HealthCare', '', 'Cameras', '', ''),
-(32, 1, 'Web Cameras', '', 'Web Cameras', '', ''),
-(31, 1, 'Scanners', '', 'Scanners', '', ''),
-(30, 1, 'Printers', '', 'Printers', '', ''),
-(29, 1, 'Mice and Trackballs', '', 'Mice and Trackballs', '', ''),
-(27, 1, 'Mac', '', 'Mac', '', ''),
-(26, 1, 'PC', '', 'PC', '', ''),
+(27, 1, 'Food', '', 'Food', '', ''),
+(26, 1, 'Drinks', '', 'Drinks', '', ''),
 (17, 1, 'Software', '', 'Software', '', ''),
 (25, 1, 'BabyCare', '', 'Components', '', ''),
-(35, 1, 'test 1', '', 'test 1', '', ''),
-(36, 1, 'test 2', '', 'test 2', '', ''),
-(37, 1, 'test 5', '', 'test 5', '', ''),
-(38, 1, 'test 4', '', 'test 4', '', ''),
-(39, 1, 'test 6', '', 'test 6', '', ''),
-(40, 1, 'test 7', '', 'test 7', '', ''),
-(41, 1, 'test 8', '', 'test 8', '', ''),
-(42, 1, 'test 9', '', 'test 9', '', ''),
-(43, 1, 'test 11', '', 'test 11', '', ''),
 (34, 1, 'Lab Testing', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'MP3 Players', '', ''),
 (18, 1, 'Cosmetics &amp; Fragrances', '&lt;p&gt;\r\n	Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', 'Laptops &amp; Notebooks', '', ''),
-(44, 1, 'test 12', '', 'test 12', '', ''),
-(45, 1, 'Windows', '', 'Windows', '', ''),
-(46, 1, 'Macs', '', 'Macs', '', ''),
-(47, 1, 'test 15', '', 'test 15', '', ''),
-(48, 1, 'test 16', '', 'test 16', '', ''),
-(49, 1, 'test 17', '', 'test 17', '', ''),
-(50, 1, 'test 18', '', 'test 18', '', ''),
-(51, 1, 'test 19', '', 'test 19', '', ''),
-(52, 1, 'test 20', '', 'test 20', '', ''),
-(53, 1, 'test 21', '', 'test 21', '', ''),
-(54, 1, 'test 22', '', 'test 22', '', ''),
-(55, 1, 'test 23', '', 'test 23', '', ''),
-(56, 1, 'test 24', '', 'test 24', '', ''),
+(45, 1, 'Fragrances', '', 'Fragrances', '', ''),
+(46, 1, 'Cosmetics', '', 'Cosmetics', '', ''),
 (57, 1, 'Pet Supplies', '', 'Tablets', '', ''),
-(58, 1, 'test 25', '', 'test 25', '', ''),
 (20, 1, 'Food  &amp; Drinks', '&lt;p&gt;\r\n	Example of category description text&lt;/p&gt;\r\n', 'Desktops', 'Example of category description', '');
 
 -- --------------------------------------------------------
@@ -527,74 +482,19 @@ CREATE TABLE `oc_category_path` (
 
 INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (25, 25, 0),
-(28, 28, 1),
-(28, 25, 0),
-(35, 35, 2),
-(35, 28, 1),
-(35, 25, 0),
-(36, 36, 2),
-(36, 28, 1),
-(36, 25, 0),
-(29, 29, 1),
-(29, 25, 0),
-(30, 30, 1),
-(30, 25, 0),
-(31, 31, 1),
-(31, 25, 0),
-(32, 32, 1),
-(32, 25, 0),
 (20, 20, 0),
-(27, 27, 1),
 (27, 20, 0),
-(26, 26, 1),
+(27, 27, 1),
 (26, 20, 0),
+(26, 26, 1),
 (18, 18, 0),
-(45, 45, 1),
 (45, 18, 0),
-(46, 46, 1),
+(45, 45, 1),
 (46, 18, 0),
+(46, 46, 1),
 (17, 17, 0),
 (33, 33, 0),
 (34, 34, 0),
-(37, 37, 1),
-(37, 34, 0),
-(38, 38, 1),
-(38, 34, 0),
-(39, 39, 1),
-(39, 34, 0),
-(40, 40, 1),
-(40, 34, 0),
-(41, 41, 1),
-(41, 34, 0),
-(42, 42, 1),
-(42, 34, 0),
-(43, 43, 1),
-(43, 34, 0),
-(44, 44, 1),
-(44, 34, 0),
-(47, 47, 1),
-(47, 34, 0),
-(48, 48, 1),
-(48, 34, 0),
-(49, 49, 1),
-(49, 34, 0),
-(50, 50, 1),
-(50, 34, 0),
-(51, 51, 1),
-(51, 34, 0),
-(52, 52, 1),
-(52, 34, 0),
-(58, 58, 2),
-(58, 52, 1),
-(58, 34, 0),
-(53, 53, 1),
-(53, 34, 0),
-(54, 54, 1),
-(54, 34, 0),
-(55, 55, 1),
-(55, 34, 0),
-(56, 56, 1),
-(56, 34, 0),
 (57, 57, 0);
 
 -- --------------------------------------------------------
@@ -620,7 +520,11 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (20, 0, 0),
 (18, 0, 0),
 (34, 0, 0),
-(57, 0, 0);
+(57, 0, 0),
+(27, 0, 0),
+(26, 0, 0),
+(46, 0, 0),
+(45, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -645,37 +549,11 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (25, 0),
 (26, 0),
 (27, 0),
-(28, 0),
-(29, 0),
-(30, 0),
-(31, 0),
-(32, 0),
 (33, 0),
 (34, 0),
-(35, 0),
-(36, 0),
-(37, 0),
-(38, 0),
-(39, 0),
-(40, 0),
-(41, 0),
-(42, 0),
-(43, 0),
-(44, 0),
 (45, 0),
 (46, 0),
-(47, 0),
-(48, 0),
-(49, 0),
-(50, 0),
-(51, 0),
-(52, 0),
-(53, 0),
-(54, 0),
-(55, 0),
-(56, 0),
-(57, 0),
-(58, 0);
+(57, 0);
 
 -- --------------------------------------------------------
 
@@ -1051,9 +929,9 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.82209998, 1, '2017-03-11 15:11:49'),
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2017-03-11 15:46:43'),
-(3, 'Euro', 'EUR', '', '€', '2', 0.93669999, 1, '2017-03-11 15:11:49');
+(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.80940002, 1, '2017-03-20 18:20:19'),
+(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2017-03-20 18:44:11'),
+(3, 'Euro', 'EUR', '', '€', '2', 0.93030000, 1, '2017-03-20 18:20:19');
 
 -- --------------------------------------------------------
 
@@ -1087,6 +965,13 @@ CREATE TABLE `oc_customer` (
   `code` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_customer`
+--
+
+INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `language_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `code`, `date_added`) VALUES
+(1, 1, 0, 1, 'Mik', 'Mon', 'mikmon@email.com', '8687704366', '', 'a4273ee89eefbd48469903d6188ded2c372115a3', '0gazqVWF2', NULL, NULL, 0, 1, '', '::1', 1, 1, 0, '', '', '2017-03-20 13:24:58');
 
 -- --------------------------------------------------------
 
@@ -1172,6 +1057,13 @@ CREATE TABLE `oc_customer_ip` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_customer_ip`
+--
+
+INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added`) VALUES
+(1, 1, '::1', '2017-03-20 13:25:00');
 
 -- --------------------------------------------------------
 
@@ -1678,12 +1570,13 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (3, 4, '0', 'content_top', 1),
 (20, 5, '0', 'column_left', 2),
 (69, 10, 'affiliate', 'column_right', 1),
-(68, 6, 'account', 'column_right', 1),
-(88, 1, 'carousel.29', 'content_top', 2),
-(72, 3, 'category', 'column_left', 1),
-(73, 3, 'banner.30', 'column_left', 2),
-(87, 1, 'featured.28', 'content_top', 1),
-(86, 1, 'slideshow.27', 'content_top', 0);
+(102, 6, 'carousel.29', 'content_bottom', 0),
+(104, 3, 'category', 'column_left', 1),
+(100, 1, 'carousel.29', 'content_top', 2),
+(99, 1, 'featured.28', 'content_top', 1),
+(98, 1, 'slideshow.27', 'content_top', 0),
+(97, 1, 'category', 'column_left', 0),
+(103, 6, 'account', 'column_right', 1);
 
 -- --------------------------------------------------------
 
@@ -1704,10 +1597,10 @@ CREATE TABLE `oc_layout_route` (
 --
 
 INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `route`) VALUES
-(38, 6, 0, 'account/%'),
+(62, 6, 0, 'account/%'),
 (17, 10, 0, 'affiliate/%'),
-(44, 3, 0, 'product/category'),
-(57, 1, 0, 'common/home'),
+(63, 3, 0, 'product/category'),
+(60, 1, 0, 'common/home'),
 (20, 2, 0, 'product/product'),
 (24, 11, 0, 'information/information'),
 (23, 7, 0, 'checkout/%'),
@@ -2133,6 +2026,13 @@ CREATE TABLE `oc_order` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `oc_order`
+--
+
+INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
+(1, 0, 'INV-2013-00', 0, 'Your Store', 'http://localhost:8080/superpharm/upload/', 1, 1, 'Mik', 'Mon', 'mikmon@email.com', '8687704366', '', '', 'Mik', 'Mon', 'UWI', '8770 NW 99th Street', '', 'Medley', '33178', 'United States', 223, 'Florida', 3630, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Cash On Delivery', 'cod', 'Mik', 'Mon', 'UWI', '8770 NW 99th Street', '', 'Medley', '33178', 'United States', 223, 'Florida', 3630, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '171.9900', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'en-US,en;q=0.8', '2017-03-20 13:53:25', '2017-03-20 13:53:25');
+
 -- --------------------------------------------------------
 
 --
@@ -2204,6 +2104,13 @@ CREATE TABLE `oc_order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_order_product`
+--
+
+INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `name`, `model`, `quantity`, `price`, `total`, `tax`, `reward`) VALUES
+(1, 1, 50, 'Centrum', 'Health 1', 1, '166.9900', '166.9900', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2300,6 +2207,15 @@ CREATE TABLE `oc_order_total` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `oc_order_total`
+--
+
+INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `value`, `sort_order`) VALUES
+(1, 1, 'sub_total', 'Sub-Total', '166.9900', 1),
+(2, 1, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
+(3, 1, 'total', 'Total', '171.9900', 9);
+
 -- --------------------------------------------------------
 
 --
@@ -2372,7 +2288,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (55, 'Cosmetics 1', '', '', '', '', '', '', '', 15, 6, 'catalog/96961-1.jpg', 0, 1, '42.5000', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 20, 1, 1, 0, '2017-03-11 11:15:59', '2017-03-11 11:18:45'),
 (56, 'BabyCare 1', '', '', '', '', '', '', '', 200, 6, 'catalog/c26-B002YD8DNW-1-l.jpg', 0, 1, '79.2500', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2017-03-11 11:17:19', '2017-03-11 11:22:02'),
 (57, 'Pet 1', '', '', '', '', '', '', '', 30, 6, 'catalog/image.jpg', 0, 1, '61.4500', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2017-03-11 11:18:28', '0000-00-00 00:00:00'),
-(50, 'Health 1', '', '', '', '', '', '', '', 100, 6, 'catalog/images.jpg', 0, 1, '166.9900', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2017-03-11 10:57:10', '2017-03-11 11:02:17'),
+(50, 'Health 1', '', '', '', '', '', '', '', 100, 6, 'catalog/images.jpg', 0, 1, '166.9900', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2017-03-11 10:57:10', '2017-03-11 11:02:17'),
 (51, 'Fragrance 1', '', '', '', '', '', '', '', 20, 6, 'catalog/16508365_10154943049861758_2395692699913067324_n.jpg', 0, 1, '600.0000', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2017-03-11 11:02:00', '2017-03-11 11:02:30'),
 (52, 'Drinks 1', '', '', '', '', '', '', '', 100, 6, 'catalog/366cec73333a6fded4f35eb86b73ff13.jpg', 0, 1, '12.0000', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2017-03-11 11:11:54', '0000-00-00 00:00:00'),
 (53, 'Stationary 1', '', '', '', '', '', '', '', 30, 6, 'catalog/51U8A21HOSL.jpg', 0, 1, '35.0000', 0, 0, '2017-03-11', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2017-03-11 11:12:52', '2017-03-11 11:14:11');
@@ -3194,44 +3110,18 @@ CREATE TABLE `oc_url_alias` (
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (849, 'category_id=20', 'desktops'),
-(834, 'category_id=26', 'pc'),
-(835, 'category_id=27', 'mac'),
+(854, 'category_id=26', 'pc'),
+(855, 'category_id=27', 'mac'),
 (730, 'manufacturer_id=8', 'apple'),
 (772, 'information_id=4', 'about_us'),
 (850, 'category_id=34', 'mp3-players'),
-(781, 'category_id=36', 'test2'),
 (848, 'category_id=18', 'laptop-notebook'),
-(775, 'category_id=46', 'macs'),
-(776, 'category_id=45', 'windows'),
+(856, 'category_id=46', 'macs'),
+(857, 'category_id=45', 'windows'),
 (846, 'category_id=25', 'component'),
-(778, 'category_id=29', 'mouse'),
-(779, 'category_id=28', 'monitor'),
-(780, 'category_id=35', 'test1'),
-(782, 'category_id=30', 'printer'),
-(783, 'category_id=31', 'scanner'),
-(784, 'category_id=32', 'web-camera'),
 (851, 'category_id=57', 'tablet'),
 (786, 'category_id=17', 'software'),
 (845, 'category_id=33', 'camera'),
-(790, 'category_id=43', 'test11'),
-(791, 'category_id=44', 'test12'),
-(792, 'category_id=47', 'test15'),
-(793, 'category_id=48', 'test16'),
-(794, 'category_id=49', 'test17'),
-(795, 'category_id=50', 'test18'),
-(796, 'category_id=51', 'test19'),
-(797, 'category_id=52', 'test20'),
-(798, 'category_id=58', 'test25'),
-(799, 'category_id=53', 'test21'),
-(800, 'category_id=54', 'test22'),
-(801, 'category_id=55', 'test23'),
-(802, 'category_id=56', 'test24'),
-(803, 'category_id=38', 'test4'),
-(804, 'category_id=37', 'test5'),
-(805, 'category_id=39', 'test6'),
-(806, 'category_id=40', 'test7'),
-(807, 'category_id=41', 'test8'),
-(808, 'category_id=42', 'test9'),
 (828, 'manufacturer_id=9', 'canon'),
 (829, 'manufacturer_id=5', 'htc'),
 (830, 'manufacturer_id=7', 'hewlett-packard'),
@@ -8500,7 +8390,7 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT for table `oc_address`
 --
 ALTER TABLE `oc_address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
@@ -8560,7 +8450,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
@@ -8595,7 +8485,7 @@ ALTER TABLE `oc_currency`
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
@@ -8615,7 +8505,7 @@ ALTER TABLE `oc_customer_history`
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_login`
 --
@@ -8695,12 +8585,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
@@ -8750,7 +8640,7 @@ ALTER TABLE `oc_option_value`
 -- AUTO_INCREMENT for table `oc_order`
 --
 ALTER TABLE `oc_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_order_custom_field`
 --
@@ -8770,7 +8660,7 @@ ALTER TABLE `oc_order_option`
 -- AUTO_INCREMENT for table `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
-  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_order_recurring`
 --
@@ -8790,7 +8680,7 @@ ALTER TABLE `oc_order_status`
 -- AUTO_INCREMENT for table `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
-  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_order_voucher`
 --
@@ -8915,7 +8805,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=853;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=858;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
